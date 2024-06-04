@@ -125,7 +125,7 @@ class Fighter extends Sprite {
 
   takeHit() {
     this.health -= 10;
-    if (this.health <= 0) {
+    if (this.health <= 9) {
       this.switchSprite("death");
     } else {
       this.switchSprite("take_hit");
@@ -135,7 +135,7 @@ class Fighter extends Sprite {
   switchSprite(sprite) {
     // Overriding all other animations with attack animation
     if (this.image === this.sprites.death.image) {
-      if(this.framesCurrent === this.sprites.attack_1.framesMax - 1) {
+      if(this.framesCurrent === this.sprites.death.framesMax - 1) {
         this.dead = true;
       }
       return;
