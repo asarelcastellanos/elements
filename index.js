@@ -84,6 +84,7 @@ const player1 = new Fighter({
     width: 175,
     height: 50,
   },
+  attackDamage: 10,
 });
 
 const player2 = new Fighter({
@@ -145,6 +146,7 @@ const player2 = new Fighter({
     width: 170,
     height: 50,
   },
+  attackDamage: 13,
 });
 
 const keys = {
